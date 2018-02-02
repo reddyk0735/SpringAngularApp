@@ -1,0 +1,56 @@
+<div class="row">
+
+    <div class="col-md-1 col-sm-2"><b>First Name</b></div>
+    <div class="col-md-2 col-sm-4">: {{user.firstName}}</div>
+    <div class="col-md-1 col-sm-2"><b>Last Name</b></div>
+    <div class="col-md-2 col-sm-4">: {{user.lastName}}</div>
+
+    <div class="col-md-1 col-sm-2"><b>Middle Name</b></div>
+    <div class="col-md-2 col-sm-4">: {{user.middleName}}</div>
+
+</div>
+
+<div class="row">
+        
+            <div class="col-md-1 col-sm-2"><b>Occupation</b></div>
+            <div class="col-md-2 col-sm-4">: {{user.occupation}}</div>
+            <div class="col-md-1 col-sm-2"><b>Age</b></div>
+            <div class="col-md-2 col-sm-4">: {{user.age}}</div>
+        
+            <div class="col-md-1 col-sm-2"><b>DOB</b></div>
+            <div class="col-md-2 col-sm-4">: {{user.dob | date: 'yyyy-MM-dd'}}</div>
+            
+</div>
+<br>
+
+<div class="row">
+
+            <div class="col-md-12"><h5><b>List of Addresses</b></h5></div>
+
+<table class="table" >
+    <thead>
+      <tr>
+        <th>Address1</th>
+        <th>Address2</th>
+        <th>City</th>
+        <th>Zip</th>
+        <th>State</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr  *ngFor="let add of user.addresses"> 
+        <td>{{add.address1}}</td>
+        <td>{{add.address2}}</td>
+        <td>{{add.city}}</td>
+        <td>{{add.zipCode}}</td>
+        <td>{{add.state}}</td>
+       
+      </tr>
+    </tbody>
+</table>
+
+</div>
+        
+       
+        

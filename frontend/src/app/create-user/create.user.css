@@ -1,0 +1,29 @@
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
+.age.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+.age.ng-dirty.ng-invalid-email {
+    background-color: yellow;
+}
+.center_div{
+    margin: 0 auto;
+    width:90% /* value of your choice which suits your alignment */
+}
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+.text-center {
+	position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+left: -150px;
+font:black;
+}
+.center-block{
+	position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+left: +300px;
+}

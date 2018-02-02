@@ -1,0 +1,30 @@
+"address1": "addr1",
+			"address2": "addr2",
+			"city": "NC",
+			"state": "NJ",
+			"zipCode": "12345"
+            <table class="table">
+    <thead>
+      <tr>
+        <th>Address1</th>
+        <th>Address2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zipcode</th>
+        <th>Delete Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr (click)="navigateToDetails()" *ngFor = "let address of addressList" style="cursor: hand"> 
+        <td>{{address.address1}}</td>
+        <td>{{address.address2}}</td>
+        <td>{{address.city}}</td>
+        <td>{{address.state}}</td>
+        <td>{{address.zipCode}}</td>
+        <td><input type="button" (click)="deleteAddress(address)" value="Delete"/></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+

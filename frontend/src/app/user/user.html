@@ -1,0 +1,24 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Action</th>
+        <th scope="col">Delete User</th>
+        <th scope="col">Edit User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor = "let user of userList" style="cursor: hand"> 
+        <td (click)="navigateToView(user)">{{user.firstName}}</td>
+        <td (click)="navigateToView(user)"> {{user.lastName}}</td>
+        <td><input type="button" class="btn  btn-primary btn-m" (click)="changeAddress(user)" value="View/Edit address"/></td>
+        <td><input type="button" class="btn  btn-primary btn-m" (click)="deleteUser(user)" value="Delete"/></td>
+        <td><input type="button" class="btn  btn-primary btn-m" (click)="editUser(user)" value="Edit"/></td>
+      </tr>
+    </tbody>
+</table>
+ 
+
+

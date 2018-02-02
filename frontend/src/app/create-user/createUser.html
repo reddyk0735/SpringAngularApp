@@ -1,0 +1,77 @@
+
+<div class="col-md-12 tablecontainer">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center"><span class="lead">User Registration Form </span></div>
+    <div class="formcontainer">
+        <div class="container center_div">
+        <form ngForm="myForm" class="form-horizontal">
+
+       
+        <div class="row">
+          <div class="col-md-12">
+            <label class="col-md-2 control-label">First Name</label>
+            <div class="col-md-7">
+              <input type="text" [(ngModel)]="user.firstName" class="form-control input-sm" [ngModelOptions]="{standalone: true}" placeholder="Enter your First Name" autofocus/>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <label class="col-md-2 control-label">Last Name</label>
+            <div class="col-md-7">
+              <input type="text" [(ngModel)]="user.lastName" class="form-control input-sm" [ngModelOptions]="{standalone: true}" placeholder="Enter your Last Name"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <label class="col-md-2 control-label">Middle Name</label>
+            <div class="col-md-7">
+              <input type="text" [(ngModel)]="user.middleName" class="form-control input-sm" [ngModelOptions]="{standalone: true}" placeholder="Enter your Middle Name"/>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label class="col-md-2 control-label" >Occupation</label>
+            <div class="col-md-7">
+              <input type="text" [(ngModel)]="user.occupation" class="form-control input-sm"  [ngModelOptions]="{standalone: true}" placeholder="Enter your Occupation"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <label class="col-md-2 control-label" >Age</label>
+            <div class="col-md-7">
+              <input type="number" [(ngModel)]="user.age" name="age" class="age form-control input-sm" [ngModelOptions]="{standalone: true}" placeholder="Enter your Age" maxlength="3" minlength="1"/>
+            </div>
+          </div>
+        </div> 
+       
+        <div class="row">
+         <div class="col-md-12">
+            <label class="col-md-2 control-label">DOB</label>
+            <div class="col-md-7">
+              <input type="text" [(ngModel)]="user.dob" class="form-control input-sm" placeholder="Enter your Date Of Birth. [yyyy-mm-dd]"/>
+            </div>
+           </div>
+         </div>
+        
+
+
+        <div class="row">
+          <div class="form-actions center-block">
+          
+            <button type="button"  (click)="saveUser()" class="btn  btn-primary btn-m" ngDisabled="myForm.$invalid">Save User</button>
+              
+          </div>
+        </div>
+        </form>  
+        </div>
+    </div>
+  </div>
+</div>     

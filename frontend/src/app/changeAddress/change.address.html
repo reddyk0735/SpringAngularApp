@@ -1,0 +1,59 @@
+
+<table class="table" >
+    <thead>
+      <tr>
+        <th>Address1</th>
+        <th>Address2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Add</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr  *ngFor="let add of addressList.addresses"> 
+        <td>{{add.address1}}</td>
+        <td>{{add.address2}}</td>
+        <td>{{add.city}}</td>
+        <td>{{add.state}}</td>
+        <td>{{add.zipCode}}</td>
+        <td><input type="button" (click)="DeleteAddress(add)" value="Delete"/></td>
+        <td><input type="button" (click)="Edit(add)" value="Edit Address"/></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div><input type="button" (click)="Add()" value="Add"/></div>
+  </div>
+
+  <div *ngIf="isAddEdit">
+
+<div class="row">
+
+    <div class="col-md-2 col-sm-2">Address1</div>
+    <div class="col-md-2 col-sm-4"><input type="text"  [(ngModel)]="postrequest.address1" /></div>
+    <div class="col-md-2 col-sm-2">Address2</div>
+    <div class="col-md-2 col-sm-4"><input type="text" [(ngModel)]="postrequest.address2" /></div>
+
+    <div class="col-md-1 col-sm-2">City</div>
+    <div class="col-md-2 col-sm-4"><input type="text" [(ngModel)]="postrequest.city"  /></div>
+
+</div>
+
+<div class="row">
+        
+            <div class="col-md-2 col-sm-2">State</div>
+            <div class="col-md-2 col-sm-4"><input  type="text" [(ngModel)]="postrequest.state" /></div>
+            <div class="col-md-2 col-sm-2">Zip Code</div>
+            <div class="col-md-2 col-sm-4"><input type="text" [(ngModel)]="postrequest.zipCode" /></div>
+        
+            <div class="col-md-1 col-sm-2"></div>
+            <div class="col-md-2 col-sm-4"><input type="button" (click)="saveEditAddress();" value="Save Address"/> </div>
+            
+        </div>
+        
+        
+  </div>
+ 

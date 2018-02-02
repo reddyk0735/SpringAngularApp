@@ -1,0 +1,28 @@
+{
+"Contacts" : [
+	{
+        "id": 0,
+        "firstName": "Viral1",
+        "lastName": "hello@gmail.com",
+        "emailAddress": "123-2343-44"
+    },
+    {
+        "id": 1,
+        "firstName": "Viral2",
+        "lastName": "hello@gmail.com",
+        "emailAddress": "123-2343-44"
+    },
+    {
+        "id": 2,
+        "firstName": "Viral3",
+        "lastName": "hello@gmail.com",
+        "emailAddress": "123-2343-44"
+    },
+    {
+        "id": 3,
+        "firstName": "Viral4",
+        "lastName": "hello@gmail.com",
+        "emailAddress": "123-2343-44"
+    }
+]
+}
